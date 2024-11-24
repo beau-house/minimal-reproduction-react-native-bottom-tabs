@@ -25,29 +25,23 @@ const ITEMS = [
 
 export default function ScreenOne() {
   return (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      <FlatList
-        contentInsetAdjustmentBehavior="automatic"
-        contentContainerStyle={{ padding: 12 }}
-        data={ITEMS}
-        renderItem={({ item }) => (
-          <Text
-            style={{
-              backgroundColor: 'pink',
-              fontSize: 16,
-              padding: 12,
-              marginBottom: 4,
-            }}
-          >
-            {item.title}
-          </Text>
-        )}
-        showsVerticalScrollIndicator={false}
-      />
-    </View>
+    <FlatList
+      contentInsetAdjustmentBehavior="automatic"
+      contentContainerStyle={{ padding: 12 }}
+      data={ITEMS}
+      renderItem={({ item }) => (
+        <Text
+          style={{
+            backgroundColor: 'pink',
+            fontSize: 16,
+            padding: 12,
+            marginBottom: 4,
+          }}
+        >
+          {item.title}
+        </Text>
+      )}
+      showsVerticalScrollIndicator={false}
+    />
   )
 }

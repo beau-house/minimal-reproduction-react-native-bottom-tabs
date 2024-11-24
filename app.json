@@ -7,6 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "backgroundColor": "#38EF14",
     "plugins": [
       "react-native-bottom-tabs",
       [
@@ -16,12 +17,13 @@
             "useFrameworks": "static"
           }
         }
-      ]
+      ],
+      "react-native-edge-to-edge"
     ],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#EE4B2B"
     },
     "ios": {
       "supportsTablet": true,

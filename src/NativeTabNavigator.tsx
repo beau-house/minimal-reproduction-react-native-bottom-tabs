@@ -25,6 +25,7 @@ export default function NativeTabNavigator() {
         component={HomeStackNavigator}
         options={{
           tabBarIcon: () => ({ sfSymbol: 'person.fill' }),
+          lazy: false,
         }}
       />
 
@@ -33,6 +34,7 @@ export default function NativeTabNavigator() {
         component={AnotherStackNavigator}
         options={{
           tabBarIcon: () => ({ sfSymbol: 'book.fill' }),
+          lazy: false,
         }}
       />
     </Tabs.Navigator>

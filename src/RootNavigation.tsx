@@ -1,9 +1,8 @@
+import { Platform } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { NavigationContainer, DarkTheme } from '@react-navigation/native'
+import { useTheme } from './state/ThemeContext'
 import NativeTabNavigator from './NativeTabNavigator'
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
-
-import ScreenOne from './screens/ScreenOne'
-import ScreenTwo from './screens/ScreenTwo'
 
 const RootStack = createNativeStackNavigator()
 
@@ -20,9 +19,26 @@ const rootNavDefaultTheme = {
   },
 }
 
+const rootNavAltTheme = {
+  ...DarkTheme,
+  dark: true,
+  colors: {
+    primary: 'hsl(0, 0%, 62.8%)',
+    background: 'blue',
+    card: 'hsl(0, 0%, 8.5%)',
+    text: 'green',
+    border: 'magenta',
+    notification: 'magenta',
+  },
+}
+
 export default function RootNavigation() {
+  const { theme } = useTheme()
+
   return (
-    <NavigationContainer theme={rootNavDefaultTheme}>
+    <NavigationContainer
+      theme={theme.mode === 'light' ? rootNavDefaultTheme : rootNavAltTheme}
+    >
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         <RootStack.Screen
           name="Tab"

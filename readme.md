@@ -1,4 +1,4 @@
-## Minimal Reproduction [ios] Tab bar background flashes when scrollEdgeAppearance="transparent" without lazy loading
+## Minimal Reproduction – [ios] Tab bar background flashes when scrollEdgeAppearance transparent (without lazy loading)
 
 ### What is this?
 
@@ -12,7 +12,7 @@ The tab bar background briefly flashes when using `scrollEdgeAppearance="transpa
 
 2. When navigating from a screen with content below the tab bar to a screen without content below the tab bar
 
-<br>
+https://github.com/user-attachments/assets/395eb628-2faf-47a0-8cbd-69974de11098
 
 ### Steps to Reproduce
 

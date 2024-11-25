@@ -1,13 +1,16 @@
-import AnotherStackNavigator from './AnotherStackNavigator'
+import NativeStackNavigatorTwo from './NativeStackNavigatorTwo'
 import { createNativeBottomTabNavigator } from '@bottom-tabs/react-navigation'
-import HomeStackNavigator from './HomeStackNavigator'
+import NativeStackNavigatorOne from './NativeStackNavigatorOne'
 
-const Tabs = createNativeBottomTabNavigator()
+import ScreenOne from './screens/ScreenOne'
+import ScreenTwo from './screens/ScreenTwo'
+
+const Tab = createNativeBottomTabNavigator()
 
 export default function NativeTabNavigator() {
   return (
-    <Tabs.Navigator
-      barTintColor={'hsl(0, 0%, 8.5%)'}
+    <Tab.Navigator
+      barTintColor={'hsl(0, 0%, 5%)'}
       hapticFeedbackEnabled
       ignoresTopSafeArea
       screenOptions={{ lazy: false }}
@@ -20,23 +23,31 @@ export default function NativeTabNavigator() {
       }}
       translucent={false}
     >
-      <Tabs.Screen
+      <Tab.Screen
         name="Stack One"
-        component={HomeStackNavigator}
+        component={NativeStackNavigatorOne}
         options={{
-          tabBarIcon: () => ({ sfSymbol: 'person.fill' }),
+          headerBlurEffect: 'dark',
+          headerLargeTitle: true,
+          headerTitle: 'Screen One',
+          headerTransparent: true,
           lazy: false,
+          tabBarIcon: () => ({ sfSymbol: 'person.fill' }),
         }}
       />
 
-      <Tabs.Screen
+      <Tab.Screen
         name="Stack Two"
-        component={AnotherStackNavigator}
+        component={NativeStackNavigatorTwo}
         options={{
-          tabBarIcon: () => ({ sfSymbol: 'book.fill' }),
+          headerBlurEffect: 'dark',
+          headerLargeTitle: true,
+          headerTitle: 'Screen Two',
+          headerTransparent: true,
           lazy: false,
+          tabBarIcon: () => ({ sfSymbol: 'book.fill' }),
         }}
       />
-    </Tabs.Navigator>
+    </Tab.Navigator>
   )
 }

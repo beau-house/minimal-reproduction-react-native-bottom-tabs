@@ -10,7 +10,7 @@ const Tab = createNativeBottomTabNavigator()
 export default function NativeTabNavigator() {
   return (
     <Tab.Navigator
-      barTintColor={'hsl(0, 0%, 5%)'}
+      barTintColor={'hsl(0, 0%, 6%)'}
       hapticFeedbackEnabled
       ignoresTopSafeArea
       screenOptions={{ lazy: false }}
@@ -24,26 +24,18 @@ export default function NativeTabNavigator() {
       translucent={false}
     >
       <Tab.Screen
-        name="Stack One"
-        component={NativeStackNavigatorOne}
+        name="Screen One"
+        component={ScreenOne}
         options={{
-          headerBlurEffect: 'dark',
-          headerLargeTitle: true,
-          headerTitle: 'Screen One',
-          headerTransparent: true,
           lazy: false,
           tabBarIcon: () => ({ sfSymbol: 'person.fill' }),
         }}
       />
 
       <Tab.Screen
-        name="Stack Two"
-        component={NativeStackNavigatorTwo}
+        name="Screen Two"
+        component={ScreenTwo}
         options={{
-          headerBlurEffect: 'dark',
-          headerLargeTitle: true,
-          headerTitle: 'Screen Two',
-          headerTransparent: true,
           lazy: false,
           tabBarIcon: () => ({ sfSymbol: 'book.fill' }),
         }}

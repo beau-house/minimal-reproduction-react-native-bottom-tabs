@@ -1,4 +1,4 @@
-import { Text, ScrollView, View, FlatList } from 'react-native'
+import { FlatList, Text } from 'react-native'
 
 const ITEMS = [
   { id: '1', title: 'Item One' },
